@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VADER Sentiment Analysis WebApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<body style="background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);">
+
+<div class="container">
+  <h2>Sentence Sentiment Analysis</h2>
+  <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="input" placeholder="please enter your text here" required="required" />	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+</div>
+
+</body>
+</html>
